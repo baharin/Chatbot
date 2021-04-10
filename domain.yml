@@ -1,0 +1,141 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - negative_answer
+  - building_name_search:
+      use_entities:
+        -building_name
+
+  - tell_me_about:
+      use_entities:
+        -building_name
+
+  - built_date_of_building:
+      use_entities:
+        -building_name
+
+  - address_of_building:
+      use_entities:
+        -building_name
+
+  - architect_of_building:
+      use_entities:
+        -building_name
+
+  - Tell_me_more:
+      use_entities:
+        -building_name
+
+  - designated_date_of_building:
+      use_entities:
+        -building_name
+
+  - landmarks_architect_built:
+      use_entities:
+        -architect_name
+
+  - landmarks_after_dates:
+      use_entities:
+        -date
+
+  - landmarks_between_dates:
+      use_entities:
+        -date2
+
+#actions:
+#  - action_building_name_search
+
+slots:
+  answer:
+    type: categorical
+    values:
+      - yes
+      - no
+
+entities:
+- building_name
+- architect_name
+- date
+- date2
+
+responses:
+  reset_slot:
+  - text: ''
+
+  utter_ok:
+  - text: "Ok! Let me know if you want to know more about this landmark ;)"
+  - text: "Alright. Let me know if you want to know more :)"
+
+  utter_want_more:
+  - text: "Do you want to know more about this landmark?"
+  - text: "Do you want to know more?"
+
+  utter_greet:
+  - text: "Hey! My name is Bella and I am developed by Baharin :). I will be helping you with landmarks of Chicago."
+  - text: "Hi there! My name is Bella and I am here to help you with landmarks of Chicago. I am developed by Baharin ;)"
+
+  utter_cheer_up:
+  - text: "Great! I am happy to hear that."
+  - text: "That's nice!"
+
+  utter_makehappy:
+  - text: "I am sorry to hear that. Take some time to relax. Everything will be fine."
+  - text: "I am sorry that you have to go through this. Everything will be fine."
+
+  utter_did_that_help:
+  - text: "Before you go, Could you please let me know if that helped you?"
+  - text: "Before you leave, could you please let me know if I were helpful?"
+
+  utter_iamsorry:
+  - text: "I am sorry to hear that. I am trying hard to learn how to be helpful and practical."
+  - text: "I am sorry! Please accept my apologies. I will try my best to help you."
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye! Have a great day."
+  - text: "Bye! Hope to see you again soon!"
+
+  utter_iamabot:
+  - text: "I am a bot ;)"
+
+  action_building_name_search:
+  - text: "Wait a second ..."
+
+  action_tell_me_about:
+  - text: "I will tell you about it now..."
+
+  action_built_date_of_building:
+  - text: "I will let you know about the built date now..."
+
+  action_address_of_building:
+  - text: "I will let you know about the address now..."
+
+  action_architect_of_building:
+  - text: "I will let you know about the architect now..."
+
+  action_Tell_me_more:
+  - text: "I will tell you more now..."
+
+  action_designated_date_of_building:
+  - text: "I will tell you the designated date now..."
+
+  action_landmarks_architect_built:
+  - text: "Let me see..."
+
+  action_landmarks_after_dates:
+  - text: "Let me see..."
+
+  action_landmarks_between_dates:
+  - text: "Let me see..."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
