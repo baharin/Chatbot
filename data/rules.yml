@@ -1,0 +1,14 @@
+version: "2.0"
+
+rules:
+
+#- rule: Ask for feedback anytime the user says goodbye
+#  steps:
+#  - intent: goodbye
+#  - action: utter_did_that_help
+  #- action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
