@@ -1,2 +1,2 @@
 # Chatbot
-A chatbot for landmarks of Chicago
+A chatbot for landmarks of Chicago using RASA
