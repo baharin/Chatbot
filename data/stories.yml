@@ -1,0 +1,214 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_makehappy
+
+- story: sad path 3
+  steps:
+  - intent: mood_unhappy
+  - action: utter_makehappy
+
+#- story: user leaves
+#  steps:
+#  - intent: goodbye
+#  - action: utter_did_that_help
+
+- story: bad help
+  steps:
+  - intent: goodbye
+  - action: utter_did_that_help
+  - intent: negative_answer
+  - action: utter_iamsorry
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: successful help
+  steps:
+  - intent: goodbye
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_cheer_up
+  - intent: goodbye
+  - action: utter_goodbye
+
+#- story: building name search
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: building_name_search
+#  - action: action_building_name_search
+- story: building name search 1
+  steps:
+  - action: reset_slot
+  - intent: building_name_search
+  - action: action_building_name_search
+  - slot_was_set:
+    - answer: yes
+  - action: utter_want_more
+  - intent: affirm
+  - action: action_Tell_me_more
+
+- story: building name search 2
+  steps:
+  - action: reset_slot
+  - intent: building_name_search
+  - action: action_building_name_search
+  - slot_was_set:
+    - answer: no
+
+
+- story: building name search 3
+  steps:
+  - action: reset_slot
+  - intent: building_name_search
+  - action: action_building_name_search
+  - slot_was_set:
+    - answer: yes
+  - action: utter_want_more
+  - intent: negative_answer
+  - action: utter_ok
+
+#- story: tell_me_about
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: tell_me_about
+#  - action: action_tell_me_about
+
+- story: tell_me_about 2
+  steps:
+  - intent: tell_me_about
+  - action: action_tell_me_about
+
+#- story: built_date_of_building
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: built_date_of_building
+#  - action: action_built_date_of_building
+
+- story: built_date_of_building 2
+  steps:
+  - intent: built_date_of_building
+  - action: action_built_date_of_building
+
+#- story: address_of_building
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: address_of_building
+#  - action: action_address_of_building
+
+- story: address_of_building 2
+  steps:
+  - intent: address_of_building
+  - action: action_address_of_building
+
+#- story: architect_of_building
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: architect_of_building
+#  - action: action_architect_of_building
+
+- story: architect_of_building 2
+  steps:
+  - intent: architect_of_building
+  - action: action_architect_of_building
+
+#- story: Tell_me_more
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: building_name_search
+#  - action: action_building_name_search
+#  - intent: Tell_me_more
+#  - action: action_Tell_me_more
+
+- story: Tell_me_more 2
+  steps:
+  - intent: Tell_me_more
+  - action: action_Tell_me_more
+
+#- story: Tell_me_more 3
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: address_of_building
+#  - action: action_address_of_building
+#  - intent: Tell_me_more
+#  - action: action_Tell_me_more
+
+#- story: Tell_me_more 3
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: address_of_building
+#  - action: action_address_of_building
+#  - intent: architect_of_building
+#  - action: action_architect_of_building
+#  - intent: Tell_me_more
+#  - action: action_Tell_me_more
+
+#- story: designated_date_of_building
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: designated_date_of_building
+#  - action: action_designated_date_of_building
+
+- story: designated_date_of_building 2
+  steps:
+  - intent: designated_date_of_building
+  - action: action_designated_date_of_building
+
+#- story: landmarks_architect_built
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: landmarks_architect_built
+#  - action: action_landmarks_architect_built
+
+- story: landmarks_architect_built 2
+  steps:
+  - intent: landmarks_architect_built
+  - action: action_landmarks_architect_built
+
+
+#- story: landmarks_after_dates
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: landmarks_after_dates
+#  - action: action_landmarks_after_dates
+
+- story: landmarks_after_dates 2
+  steps:
+  - intent: landmarks_after_dates
+  - action: action_landmarks_after_dates
+
+
+#- story: landmarks_between_dates
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: landmarks_between_dates
+#  - action: action_landmarks_between_dates
+
+- story: landmarks_between_dates 2
+  steps:
+  - intent: landmarks_between_dates
+  - action: action_landmarks_between_dates
