@@ -1,0 +1,324 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - yo
+    - Hey buddy
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - Thank you. bye
+    - thanks. bye
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - right
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: building_name_search
+  examples: |
+    - Is [Farwell Building](building_name) in Chicago?
+    - [Farwell Building](building_name)?
+    - [Farwell Building](building_name) in Chicago?
+    - Is [Drake Fountain](building_name) in Chicago?
+    - [Drake Fountain](building_name)?
+    - [Drake Fountain](building_name) in Chicago?
+    - Is [Palmolive Building](building_name) in Chicago?
+    - [Palmolive Building](building_name)?
+    - [Palmolive Building](building_name) in Chicago?
+    - Is [Old Colony Building](building_name) in Chicago?
+    - [Old Colony Building](building_name)?
+    - [Old Colony Building](building_name) in Chicago?
+    - Is [Marquette Building](building_name) in Chicago?
+    - [Marquette Building](building_name)?
+    - [Marquette Building](building_name) in Chicago?
+    - Is [Tribune Tower](building_name) in Chicago?
+    - [Tribune Tower](building_name)?
+    - [Tribune Tower](building_name) in Chicago?
+    - Is [Pennsylania Bridge](building_name) in Chicago?
+    - [Pennsylania Bridge](building_name)?
+    - [Pennsylania Bridge](building_name) in Chicago?
+
+
+- intent: tell_me_about
+  examples: |
+    - Can you please tell me about [Farwell Building](building_name) of Chicago?
+    - Tell me about [Farwell Building](building_name)?
+    - What do you know about [Farwell Building](building_name)?
+    - Can you please tell me about [Drake Fountain](building_name) of Chicago?
+    - Tell me about [Drake Fountain](building_name)?
+    - What do you know about [Drake Fountain](building_name)?
+    - Can you please tell me about [Palmolive Building](building_name) of Chicago?
+    - Tell me about [Palmolive Building](building_name)?
+    - What do you know about [Palmolive Building](building_name)?
+    - Can you please tell me about [Old Colony Building](building_name) of Chicago?
+    - Tell me about [Old Colony Building](building_name)?
+    - What do you know about [Old Colony Building](building_name)?
+    - Can you please tell me about [Marquette Building](building_name) of Chicago?
+    - Tell me about [Marquette Building](building_name)?
+    - What do you know about [Marquette Building](building_name)?
+    - Can you please tell me about [Tribune Tower](building_name) of Chicago?
+    - Tell me about [Tribune Tower](building_name)?
+    - What do you know about [Tribune Tower](building_name)?
+    - Can you please tell me about [Pennsylania Bridge](building_name) of Chicago?
+    - Tell me about [Pennsylania Bridge](building_name)?
+    - What do you know about [Pennsylania Bridge](building_name)?
+
+- intent: built_date_of_building
+  examples: |
+    - When was [Farwell Building](building_name) built?
+    - What is the built date of [Farwell Building](building_name)?
+    - built date [Farwell Building](building_name)?
+    - When was [Drake Fountain](building_name) built?
+    - What is the built date of [Drake Fountain](building_name)?
+    - built date [Drake Fountain](building_name)?
+    - When was [Palmolive Building](building_name) built?
+    - What is the built date of [Palmolive Building](building_name)?
+    - built date [Palmolive Building](building_name)?
+    - When was [Old Colony Building](building_name) built?
+    - What is the built date of [Old Colony Building](building_name)?
+    - built date [Old Colony Building](building_name)?
+    - When was [Marquette Building](building_name) built?
+    - What is the built date of [Marquette Building](building_name)?
+    - built date [Marquette Building](building_name)?
+    - When was [Tribune Tower](building_name) built?
+    - What is the built date of [Tribune Tower](building_name)?
+    - built date [Tribune Tower](building_name)?
+    - When was [Pennsylania Bridge](building_name) built?
+    - What is the built date of [Pennsylania Bridge](building_name)?
+    - built date [Pennsylania Bridge](building_name)?
+
+- intent: address_of_building
+  examples: |
+    - Where is [Farwell Building](building_name)?
+    - What is the address of [Farwell Building](building_name)?
+    - address [Farwell Building](building_name)?
+    - Where is [Drake Fountain](building_name)?
+    - What is the address of [Drake Fountain](building_name)?
+    - address [Drake Fountain](building_name)?
+    - Where is [Palmolive Building](building_name)?
+    - What is the address of [Palmolive Building](building_name)?
+    - address [Palmolive Building](building_name)?
+    - Where is [Old Colony Building](building_name)?
+    - What is the address of [Old Colony Building](building_name)?
+    - address [Old Colony Building](building_name)?
+    - Where is [Marquette Building](building_name)?
+    - What is the address of [Marquette Building](building_name)?
+    - address [Marquette Building](building_name)?
+    - Where is [Tribune Tower](building_name)?
+    - What is the address of [Tribune Tower](building_name)?
+    - address [Tribune Tower](building_name)?
+    - Where is [Pennsylania Bridge](building_name)?
+    - What is the address of [Pennsylania Bridge](building_name)?
+    - address [Pennsylania Bridge](building_name)?
+
+- intent: architect_of_building
+  examples: |
+    - Who built [Farwell Building](building_name)?
+    - architect [Farwell Building](building_name)?
+    - Who built [Drake Fountain](building_name)?
+    - architect [Drake Fountain](building_name)?
+    - Who built [Palmolive Building](building_name)?
+    - architect [Palmolive Building](building_name)?
+    - Who built [Old Colony Building](building_name)?
+    - architect [Old Colony Building](building_name)?
+    - Who built [Marquette Building](building_name)?
+    - architect [Marquette Building](building_name)?
+    - Who built [Tribune Tower](building_name)?
+    - architect [Tribune Tower](building_name)?
+    - Who built [Pennsylania Bridge](building_name)?
+    - architect [Pennsylania Bridge](building_name)?
+
+- intent: Tell_me_more
+  examples: |
+    - Can you please tell me more about [Farwell Building](building_name)?
+    - What else do you know about [Farwell Building](building_name)?
+    - more?
+    - Tell me more about [Farwell Building](building_name).
+    - Tell me more.
+    - Tell me more about it.
+    - Can you please tell me more about [Drake Fountain](building_name)?
+    - What else do you know about [Drake Fountain](building_name)?
+    - Tell me more about [Drake Fountain](building_name).
+    - Can you please tell me more about [Palmolive Building](building_name)?
+    - What else do you know about [Palmolive Building](building_name)?
+    - Tell me more about [Palmolive Building](building_name).
+    - Can you please tell me more about [Old Colony Building](building_name)?
+    - What else do you know about [Old Colony Building](building_name)?
+    - Tell me more about [Old Colony Building](building_name).
+    - Can you please tell me more about [Marquette Building](building_name)?
+    - What else do you know about [Marquette Building](building_name)?
+    - Tell me more about [Marquette Building](building_name).
+    - Can you please tell me more about [Tribune Tower](building_name)?
+    - What else do you know about [Tribune Tower](building_name)?
+    - Tell me more about [Tribune Tower](building_name).
+    - Can you please tell me more about [Pennsylania Bridge](building_name)?
+    - What else do you know about [Pennsylania Bridge](building_name)?
+    - Tell me more about [Pennsylania Bridge](building_name).
+
+- intent: designated_date_of_building
+  examples: |
+    - When is the designated date of [Farwell Building](building_name)?
+    - What is the designated date of [Farwell Building](building_name)?
+    - designated date [Farwell Building](building_name)?
+    - When is the designated date of [Drake Fountain](building_name)?
+    - What is the designated date of [Drake Fountain](building_name)?
+    - designated date [Drake Fountain](building_name)?
+    - When is the designated date of [Palmolive Building](building_name)?
+    - What is the designated date of [Palmolive Building](building_name)?
+    - designated date [Palmolive Building](building_name)?
+    - When is the designated date of [Old Colony Building](building_name)?
+    - What is the designated date of [Old Colony Building](building_name)?
+    - designated date [Old Colony Building](building_name)?
+    - When is the designated date of [Marquette Building](building_name)?
+    - What is the designated date of [Marquette Building](building_name)?
+    - designated date [Marquette Building](building_name)?
+    - When is the designated date of [Tribune Tower](building_name)?
+    - What is the designated date of [Tribune Tower](building_name)?
+    - designated date [Tribune Tower](building_name)?
+    - When is the designated date of [Pennsylania Bridge](building_name)?
+    - What is the designated date of [Pennsylania Bridge](building_name)?
+    - designated date [Pennsylania Bridge](building_name)?
+
+- intent: landmarks_architect_built
+  examples: |
+    - Show me some landmarks that [Philip B. Maher](architect_name) built.
+    - What are the landmarks that [Philip B. Maher](architect_name) built?
+    - What else has [Philip B. Maher](architect_name) built?
+    - Show me some landmarks that [Richard Henry Park](architect_name) built.
+    - What are the landmarks that [Richard Henry Park](architect_name) built?
+    - What else has [Richard Henry Park](architect_name) built?
+    - Show me some landmarks that [Cobb & Frost](architect_name) built.
+    - What are the landmarks that [Cobb & Frost](architect_name) built?
+    - What else has [Cobb & Frost](architect_name) built?
+    - Show me some landmarks that [Barry Byrne](architect_name) built.
+    - What are the landmarks that [Barry Byrne](architect_name) built?
+    - What else has [Barry Byrne](architect_name) built?
+    - Show me some landmarks that [Argyle E. Robinson](architect_name) built.
+    - What are the landmarks that [Argyle E. Robinson](architect_name) built?
+    - What else has [Argyle E. Robinson](architect_name) built?
+    - Show me some landmarks that [Holabird and Roche](architect_name) built.
+    - What are the landmarks that [Holabird and Roche](architect_name) built?
+    - What else has [Holabird and Roche](architect_name) built?
+    - Show me some landmarks that [Adler & Sullivan](architect_name) built.
+    - What are the landmarks that [Adler & Sullivan](architect_name) built?
+    - What else has [Adler & Sullivan](architect_name) built?
+
+
+- intent: landmarks_after_dates
+  examples: |
+    - Show me some landmarks after [1980](date).
+    - What are some landmarks after [1980](date)?
+    - What landmarks are built after [1980](date)?
+    - Show me some landmarks after [1890](date).
+    - What are some landmarks after [1890](date)?
+    - What landmarks are built after [1890](date)?
+    - Show me some landmarks after [1880](date).
+    - What are some landmarks after [1880](date)?
+    - What landmarks are built after [1880](date)?
+
+- intent: landmarks_between_dates
+  examples: |
+    - Show me some landmarks between [1980](date) and [1990](date2).
+    - What are some landmarks between [1980](date) and [1990](date2)?
+    - What landmarks are built between [1980](date) and [1990](date2)?
+    - Show me some landmarks between [1990](date) and [2000](date2).
+    - What are some landmarks between [1990](date) and [2000](date2)?
+    - What landmarks are built between [1990](date) and [2000](date2)?
+    - Show me some landmarks between [1880](date) and [1990](date2).
+    - What are some landmarks between [1880](date) and [1990](date2)?
+    - What landmarks are built between [1880](date) and [1990](date2)?
+
+- intent: negative_answer
+  examples: |
+    - No
+    - No!
+    - Not really
+    - No you are not helping.
+    - You are not helpful.
+    - I am disappointed!
+
+-regex: |
+  date: \b\d{4}\b
+  date2: \b\d{4}\b
+
+#-lookup: building_name
+#  buildingnames.txt
+
+#-lookup: architect_name
+#  architectname.txt
+
+-lookup: |
+  building_name : buildingnames.txt
+  architect_name : architectname.txt
